@@ -1,0 +1,12 @@
+COMMENT ##############################################################################
+COMMENT Business Entity : OrganizationTreeNode
+COMMENT ##############################################################################
+
+METADATA|OrganizationTreeNode|TreeStructureCode|TreeCode|TreeVersionName|OrganizationName|ClassificationCode|ParentOrganizationName|ParentClassificationCode
+MERGE|OrganizationTreeNode|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|Vision Corporation|ENTERPRISE||
+MERGE|OrganizationTreeNode|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|XX_AT_PROJ1R Human Resources|DEPARTMENT|Vision Corporation|ENTERPRISE
+MERGE|OrganizationTreeNode|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|XX_AT_PROJ1R Financing|DEPARTMENT|Vision Corporation|ENTERPRISE
+MERGE|OrganizationTreeNode|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|XX_AT_PROJ1R Operations|DEPARTMENT|Vision Corporation|ENTERPRISE
+MERGE|OrganizationTreeNode|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|XX_AT_PROJ1R Information Techology|DEPARTMENT|Vision Corporation|ENTERPRISE
+MERGE|OrganizationTreeNode|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|XX_AT_PROJ1R Training And Development|DEPARTMENT|XX_AT_PROJ1R Human Resources|DEPARTMENT
+MERGE|OrganizationTreeNode|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|XX_AT_PROJ1R Claims|DEPARTMENT|XX_AT_PROJ1R Human Resources|DEPARTMENT

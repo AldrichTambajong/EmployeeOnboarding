@@ -1,0 +1,23 @@
+COMMENT ##############################################################################
+COMMENT Business Entity : Organization (Modeled off of restaurant structure)
+COMMENT ##############################################################################
+METADATA|Organization|SourceSystemOwner|SourceSystemId|EffectiveStartDate|EffectiveEndDate|Name|SourceRefTableName=DEPT_TBL|SourceRef001=<source-column>
+MERGE|Organization|XX_AT|XX_AT_PROJ1R_HR|1950/01/01|4712/12/31|XX_AT_PROJ1R Human Resources||XX_AT_PROJ1R_HR
+MERGE|Organization|XX_AT|XX_AT_PROJ1R_OP|1950/01/01|4712/12/31|XX_AT_PROJ1R Operations||XX_AT_PROJ1R_OP
+MERGE|Organization|XX_AT|XX_AT_PROJ1R_FI|1950/01/01|4712/12/31|XX_AT_PROJ1R Financing||XX_AT_PROJ1R_FI
+MERGE|Organization|XX_AT|XX_AT_PROJ1R_TD|1950/01/01|4712/12/31|XX_AT_PROJ1R Training And Development||XX_AT_PROJ1R_TD
+MERGE|Organization|XX_AT|XX_AT_PROJ1R_C|1950/01/01|4712/12/31|XX_AT_PROJ1R Claims||XX_AT_PROJ1R_C
+MERGE|Organization|XX_AT|XX_AT_PROJ1R_IT|1950/01/01|4712/12/31|XX_AT_PROJ1R Information Techology||XX_AT_PROJ1R_IT
+COMMENT Possibly add in RECRUITING or MANAGEMENT departments
+
+
+COMMENT ##############################################################################
+COMMENT Business Entity : OrgUnitClassification
+COMMENT ##############################################################################
+METADATA|OrgUnitClassification|SourceSystemOwner|SourceSystemId|EffectiveStartDate|EffectiveEndDate|OrganizationId(SourceSystemId)|ClassificationCode|SetCode|Status
+MERGE|OrgUnitClassification|XX_AT|XX_AT_PROJ1R_HR_CLASS|1950/01/01|4712/12/31|XX_AT_PROJ1R_HR|DEPARTMENT|COMMON|A
+MERGE|OrgUnitClassification|XX_AT|XX_AT_PROJ1R_OP_CLASS|1950/01/01|4712/12/31|XX_AT_PROJ1R_OP|DEPARTMENT|COMMON|A
+MERGE|OrgUnitClassification|XX_AT|XX_AT_PROJ1R_FI_CLASS|1950/01/01|4712/12/31|XX_AT_PROJ1R_FI|DEPARTMENT|COMMON|A
+MERGE|OrgUnitClassification|XX_AT|XX_AT_PROJ1R_TD_CLASS|1950/01/01|4712/12/31|XX_AT_PROJ1R_TD|DEPARTMENT|COMMON|A
+MERGE|OrgUnitClassification|XX_AT|XX_AT_PROJ1R_C_CLASS|1950/01/01|4712/12/31|XX_AT_PROJ1R_C|DEPARTMENT|COMMON|A
+MERGE|OrgUnitClassification|XX_AT|XX_AT_PROJ1R_IT_CLASS|1950/01/01|4712/12/31|XX_AT_PROJ1R_IT|DEPARTMENT|COMMON|A

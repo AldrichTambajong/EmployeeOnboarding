@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified"><xsd:element name="DATA_DS" > <xsd:complexType> <xsd:sequence> <xsd:element name="ARCHIVEACTIONID" type="xsd:string"/><xsd:element name="DELIVERYOPTIONID" type="xsd:string"/><xsd:element name="PAYROLLACTIONID" type="xsd:string"/><xsd:element name="FLOWINSTANCENAME" type="xsd:string"/><xsd:element name="G_1" > <xsd:complexType> <xsd:sequence><xsd:element name="PAYROLL_ACTION_ID" type="xsd:string"/><xsd:element name="G_2" > <xsd:complexType> <xsd:sequence><xsd:element name="FILE_FRAGMENT" ><xsd:complexType><xsd:sequence>
+<xsd:element name="XX_AT_Extract" >
+	<xsd:complexType>
+		<xsd:sequence><xsd:element name="REP_CATEGORY_NAME" type="xsd:string"/>
+<xsd:element name="parameters">
+	<xsd:complexType>
+		<xsd:sequence><xsd:element name="effective_date" type="xsd:string"/><xsd:element name="legislative_data_group_id" type="xsd:string"/><xsd:element name="parameter_group_id" type="xsd:string"/><xsd:element name="report_category_id" type="xsd:string"/><xsd:element name="request_id" type="xsd:string"/><xsd:element name="start_date" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+			<xsd:element name="Departments" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Department_Details" maxOccurs="1">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Department_Name" type="xsd:string"/>
+									<xsd:element name="Department_Location" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Department_Summary" maxOccurs="1">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Record_Code" type="xsd:string"/>
+									<xsd:element name="Report_Date" type="xsd:dateTime"/>
+									<xsd:element name="Employee_Count" type="xsd:decimal"/>
+									<xsd:element name="Employees" maxOccurs="unbounded">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="Employee_Details" maxOccurs="1">
+													<xsd:complexType>
+														<xsd:sequence>
+															<xsd:element name="Name" type="xsd:string"/>
+															<xsd:element name="Job" type="xsd:string"/>
+														</xsd:sequence>
+													</xsd:complexType>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element></xsd:sequence></xsd:complexType></xsd:element></xsd:sequence>      </xsd:complexType></xsd:element></xsd:sequence></xsd:complexType></xsd:element></xsd:sequence></xsd:complexType></xsd:element> 
+</xsd:schema>

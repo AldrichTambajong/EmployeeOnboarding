@@ -1,0 +1,11 @@
+COMMENT ##############################################################################
+COMMENT Business Entity : Organization Tree For Project 
+COMMENT ##############################################################################
+METADATA|OrganizationTree|TreeStructureCode|TreeCode|TreeName|TreeDescription
+MERGE|OrganizationTree|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT RES Project Organization Tree|Organization Tree for Project1
+
+COMMENT ##############################################################################
+COMMENT Business Entity : OrganizationTreeVersion
+COMMENT ##############################################################################
+METADATA|OrganizationTreeVersion|TreeStructureCode|TreeCode|TreeVersionName|TreeVersionDescription|TreeVersionStartDate|TreeVersionEndDate
+MERGE|OrganizationTreeVersion|PER_ORG_TREE_STRUCTURE|XX_AT_RES_Proj_Tree|XX_AT_RES_Proj_Tree_v1|Version for XX_AT_RES_Proj_Tree|1950/01/01|4712/12/31

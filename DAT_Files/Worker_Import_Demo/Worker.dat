@@ -1,0 +1,47 @@
+COMMENT ##############################################################################
+COMMENT Business Entity : Worker
+COMMENT ##############################################################################
+METADATA|Worker|SourceSystemOwner|SourceSystemId|PersonNumber|EffectiveStartDate|EffectiveEndDate|ActionCode|StartDate|SourceRefTableName=PERSON|SourceRef001=EMPLID
+MERGE|Worker|XX_AT|XX_AT_PROJ_WORKER23|XX_AT_WORKER23|2024/07/01|4712/12/31|HIRE|2024/07/01||XX_AT_PROJ_WORKER23
+MERGE|Worker|XX_AT|XX_AT_PROJ_WORKER24|XX_AT_WORKER24|2024/07/01|4712/12/31|HIRE|2024/07/01||XX_AT_PROJ_WORKER24
+
+
+
+
+COMMENT ##############################################################################
+COMMENT Business Entity : PersonName
+COMMENT ##############################################################################
+METADATA|PersonName|SourceSystemOwner|SourceSystemId|PersonId(SourceSystemId)|EffectiveStartDate|EffectiveEndDate|LegislationCode|FirstName|LastName|NameType
+MERGE|PersonName|XX_AT|XX_AT_WORKER23_NAME|XX_AT_PROJ_WORKER23|2024/07/01|4712/12/31|US|John|DoeUS|GLOBAL
+MERGE|PersonName|XX_AT|XX_AT_WORKER24_NAME|XX_AT_PROJ_WORKER24|2024/07/01|4712/12/31|GB|John|DoeUK|GLOBAL
+
+
+
+COMMENT ##############################################################################
+COMMENT Business Entity : WorkRelationship
+COMMENT ##############################################################################
+METADATA|WorkRelationship|SourceSystemOwner|SourceSystemId|PersonId(SourceSystemId)|DateStart|WorkerType|WorkerNumber|LegalEmployerName|PrimaryFlag|OnMilitaryServiceFlag|RehireRecommendationFlag|SourceRefTableName=job_data|SourceRef001=job_id
+MERGE|WorkRelationship|XX_AT|XX_AT_WORKER23_RELATIONSHIP|XX_AT_PROJ_WORKER23|2024/07/01|E|Worker23|US1 Legal Entity|Y|N|Y||XX_AT_PROJ_WORKER23::WR
+MERGE|WorkRelationship|XX_AT|XX_AT_WORKER24_RELATIONSHIP|XX_AT_PROJ_WORKER24|2024/07/01|E|Worker24|UK Legal Entity|Y|N|Y||XX_AT_PROJ_WORKER24::WR
+
+
+
+
+
+
+COMMENT ##############################################################################
+COMMENT Business Entity : EmploymentTerms
+COMMENT ##############################################################################
+METADATA|WorkTerms|SourceSystemOwner|SourceSystemId|AssignmentNumber|PeriodOfServiceId(SourceSystemId)|PersonId(SourceSystemId)|EffectiveLatestChange|EffectiveSequence|EffectiveStartDate|EffectiveEndDate|AssignmentStatusTypeCode|AssignmentType|BusinessUnitShortCode|FreezeStartDate|FreezeUntilDate|PositionOverrideFlag|PrimaryWorkTermsFlag|ActionCode|SystemPersonType
+MERGE|WorkTerms|XX_AT|XX_AT_WORKER23_TERMS|Worker_WorkTerms23|XX_AT_WORKER23_RELATIONSHIP|XX_AT_PROJ_WORKER23|Y|1|2024/07/01|4712/12/31|ACTIVE_PROCESS|ET|US1 Business Unit|1901/01/01|4712/12/31|Y|Y|HIRE|EMP
+MERGE|WorkTerms|XX_AT|XX_AT_WORKER24_TERMS|Worker_WorkTerms24|XX_AT_WORKER24_RELATIONSHIP|XX_AT_PROJ_WORKER24|Y|1|2024/07/01|4712/12/31|ACTIVE_PROCESS|ET|UK Business Unit|1901/01/01|4712/12/31|Y|Y|HIRE|EMP
+
+
+
+
+COMMENT ##############################################################################
+COMMENT Business Entity : Assignment
+COMMENT ##############################################################################
+METADATA|Assignment|SourceSystemOwner|SourceSystemId|AssignmentNumber|EffectiveLatestChange|EffectiveSequence|EffectiveStartDate|EffectiveEndDate|AssignmentStatusTypeCode|AssignmentType|BusinessUnitShortCode|PrimaryFlag|PersonId(SourceSystemId)|WorkTermsAssignmentId(SourceSystemId)|OrganizationId(SourceSystemId)|JobId(SourceSystemId)|PositionId(SourceSystemId)|ActionCode
+MERGE|Assignment|XX_AT|XX_AT_WORKER23_ASSIGNMENT|Worker_Assignment23|Y|1|2024/07/01|4712/12/31|ACTIVE_PROCESS|E|US1 Business Unit|Y|XX_AT_PROJ_WORKER23|XX_AT_WORKER23_TERMS|XX_AT_PROJ1R_HR|XX_AT_PROJ1R_JOB4|XX_AT_PROJ1R_US_HR_Specialist|HIRE
+MERGE|Assignment|XX_AT|XX_AT_WORKER24_ASSIGNMENT|Worker_Assignment24|Y|1|2024/07/01|4712/12/31|ACTIVE_PROCESS|E|UK Business Unit|Y|XX_AT_PROJ_WORKER24|XX_AT_WORKER24_TERMS|XX_AT_PROJ1R_HR|XX_AT_PROJ1R_JOB4|XX_AT_PROJ1R_UK_HR_Specialist|HIRE
